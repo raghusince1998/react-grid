@@ -19,3 +19,47 @@ jobs:
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+
+
+# name: Publish to GitHub Packages and npm
+
+# on:
+#   push:
+#     tags:
+#       - 'v*'  # e.g., v1.0.26
+
+# jobs:
+#   publish:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: read
+#       packages: write
+#       id-token: write
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v4
+#         with:
+#           node-version: '18'
+#           registry-url: 'https://registry.npmjs.org/'
+#           scope: '@raghusince1998'
+
+#       - name: Install dependencies
+#         run: npm ci
+
+#       - name: Build the package
+#         run: npm run build  # update this if your build script is different
+
+#       - name: Publish to npm
+#         run: npm publish --access public
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+#       - name: Publish to GitHub Packages
+#         run: npm publish --registry=https://npm.pkg.github.com/
+#         env:
+#           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
