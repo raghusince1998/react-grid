@@ -4,6 +4,7 @@ dist
 *~
 coverage
 .github
+.npmrc
 
 # Editor directories and files
 .vscode/*

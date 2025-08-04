@@ -1,6 +1,6 @@
 {
-  "name": "@raghuraj-singh-solanki/react-grid",
-  "version": "1.0.25",
+  "name": "@raghusince1998/react-grid",
+  "version": "1.0.27",
   "description": "library for react grid ",
   "homepage": "https://github.com/raghusince1998/react-grid#readme",
   "bugs": {
@@ -20,7 +20,10 @@
   ],
   "scripts": {
     "build": "react-scripts build",
-    "rollup": "rollup -c --bundleConfigAsCjs"
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "publish:npm": "npm publish --registry=https://registry.npmjs.org/",
+    "publish:github": "npm publish --registry=https://npm.pkg.github.com/",
+    "publish:both": "npm run publish:github && npm run publish:npm"
   },
   "dependencies": {
     "acorn": "^8.14.0",
