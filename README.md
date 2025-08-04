@@ -27,6 +27,10 @@ yarn add @raghuraj-singh/react-grid
 
 ## ⚙️ Basic Usage
 
+<pre lang="md"> ```jsx import Grid from '@raghuraj-singh/react-grid'; function App() { const gridProps = { items: [], mobileDataProps: { title: 'Name', primaryDescription: ['PlantCode', 'FunctionalLocationName'], secondaryDescription: [ { item1: 'SerialId', item2: 'ModelDescription', separator: '|' } ] }, columns: [ { name: 'Plant Code', field: 'PlantCode', sortable: true }, { name: 'Asset', field: 'Name', sortable: true }, { name: 'Site', field: 'FunctionalLocationName', sortable: true }, { name: 'Manufacturer serial number', field: 'SerialId', sortable: true }, { name: 'Model', field: 'ModelDescription', sortable: false }, { name: '', field: '', sortable: false } ], actions: { callBack: redirectToAssetDetail, label: 'Create quote' }, filters: [ { allLabel: 'All Sites', field: 'FunctionalLocationName', type: 'string' }, { allLabel: 'All Models', field: 'ModelDescription', type: 'string' } ], searchFields: ['PlantCode', 'Name', 'FunctionalLocationName', 'SerialId', 'ModelDescription'], pageSize: 8 }; return ( <div className="App"> <Grid {...gridProps} /> </div> ); } const redirectToAssetDetail = (rowData) => { window.location.href = `?serialId=${rowData.SerialId}&assetId=${rowData.Name}`; }; export default App; ``` </pre>
+
+## ⚙️ Basic Usage
+
 > import Grid from '@raghuraj-singh/react-grid';
  
 > function App() {
@@ -86,11 +90,26 @@ yarn add @raghuraj-singh/react-grid
 
 ## 🔧 Props Reference
 Grid component props
-- Prop	     Type	        Description
-> - items	array	Array of data objects to render
-columns	array	Column definitions with field, name, sortable
-actions	object	Action button with callback and label
-filters	array	Optional filters by field and label
-searchFields	array	Fields to search through
-pageSize	number	Number of rows per page
-mobileDataProps	object	Config for mobile card rendering
+- Prop	              Type	        Description
+> - items	           array	       Array of data objects to render
+> - columns	         array	       Column definitions with field, name, sortable
+> - actions	         object	      Action button with callback and label
+> - filters	         array	       Optional filters by field and label
+> - searchFields	    array	       Fields to search through
+> - pageSize	        number	      Number of rows per page
+> - mobileDataProps	 object	     Config for mobile card rendering
+
+## 🛠️ Development
+To run this project locally:
+```bash
+git clone https://github.com/your-username/react-grid.git
+cd react-grid
+npm install
+npm run dev
+```
+
+## 🤝 Contributing
+Contributions and feedback are welcome!
+Feel free to open an issue or submit a pull request.
+
+
