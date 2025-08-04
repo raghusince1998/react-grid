@@ -1,6 +1,6 @@
 {
-  "name": "react-grid",
-  "version": "1.0.0",
+  "name": "@raghuraj-singh-solanki/react-grid",
+  "version": "1.0.25",
   "description": "library for react grid ",
   "homepage": "https://github.com/raghusince1998/react-grid#readme",
   "bugs": {
@@ -282,6 +282,9 @@
     "sass": "^1.81.0",
     "tslib": "^2.8.1",
     "typescript": "^5.7.2"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "module": "dist/esm/index.js"
 }
