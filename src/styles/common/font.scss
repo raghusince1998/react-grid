@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$msv-primary-font-family: "Roboto", "sans-serif";
+
+$msv-font-weight-normal: normal;
+$msv-font-weight-light: 300;
+$msv-font-weight-400: 400;
+$msv-font-weight-500: 500;
+$msv-font-weight-heavy: 600;
+$msv-font-weight-600: 600;
+$msv-font-weight-700: 700;
+
+// Font Sizes
+$msv-font-size-xs: 12px;
+$msv-font-size-s: 14px;
+$msv-font-size-m: 16px;
+$msv-font-size-sm: 18px;
+$msv-font-size-ml: 20px;
+$msv-font-size-sl: 22px;
+$msv-font-size-l: 24px;
+$msv-font-size-lm: 26px;
+$msv-font-size-lx: 30px;
+$msv-font-size-xl: 36px;
+$msv-font-size-xxl: 48px;
+$msv-font-size-xxxl: 50px;
+$msv-font-size-heading: 50px;
+
+
+//line Heights
+$msv-line-height-x: 14px;
+$msv-line-height-xs: 16px;
+$msv-line-height-sx: 18px;
+$msv-line-height-ms: 18.75px;
+$msv-line-height-s: 20px;
+$msv-line-height-sm: 22px;
+$msv-line-height-m: 24px;
+$msv-line-height-sl: 27px;
+$msv-line-height-l: 28px;
+$msv-line-height-lx: 30px;
+$msv-line-height-ls: 32px;
+$msv-line-height-lm: 35px;
+$msv-line-height-xl: 44px;
+$msv-line-height-xxl: 52px;
+$msv-line-height-xxxl: 80px;
+$msv-line-height-heading: 52px;
+$msv-line-height-body-mobile: 19px;
+
+
+// Colors
+$msv-primary-blue: #004270;
+$msv-primary-yellow: #FEC357;
+$msv-primary-dark-gray: #243444;
+$msv-primary-blue-gray: #F0F4F6;
+$msv-secondary-black-blue: #1D252E;
+$msv-secondary-white: #FFFFFF;
+$msv-secondary-table-blue: #F7F9FB;
+$msv-secondary-light-blue: #287BA9;
+$msv-font-color-blue: #004270;
+
+$msv-primary-font-color: #3A3A3C;
+$msv-secondary-font-color: #1D252E;
+$msv-font-color-white: #FFFFFF;
+$msv-font-color-blue: #004270;
+
+// Status Colors
+$msv-status-accepted: #1A6739;
+$msv-status-declined: #B61010;
+$msv-status-pending: #92620c;
+$msv-status-expired: #505D69;
+$msv-status-expired: #505D69;
+$msv-status-pin-point-hover: #798994;
+$msv-status-ux-gray: #F2F4F5;
+
+
+//font-size: 50px -- line-height: 52px -- font-weight: 700
+@mixin font-roboto-bold-xl () {
+  font-family: $msv-primary-font-family;
+  font-weight: $msv-font-weight-400;
+  font-style: $msv-font-weight-normal;
+  font-size: $msv-font-size-m;
+  line-height: $msv-line-height-sx;
+  color: $msv-primary-blue;
+}

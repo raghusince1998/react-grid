@@ -1,0 +1,22 @@
+node_modules
+dist
+.env          # Environment variables
+*~
+coverage
+.github
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.vbs
+*.vbproj
+*.vcxproj
+*.vshosts
+*.vsixmanifest
