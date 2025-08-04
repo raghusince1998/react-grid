@@ -27,67 +27,77 @@ yarn add @raghuraj-singh/react-grid
 
 ## ⚙️ Basic Usage
 
-<pre lang="markdown"> ```jsx import Grid from '@raghuraj-singh/react-grid'; function App() { const gridProps = { items: [], mobileDataProps: { title: 'Name', primaryDescription: ['PlantCode', 'FunctionalLocationName'], secondaryDescription: [ { item1: 'SerialId', item2: 'ModelDescription', separator: '|' } ] }, columns: [ { name: 'Plant Code', field: 'PlantCode', sortable: true }, { name: 'Asset', field: 'Name', sortable: true }, { name: 'Site', field: 'FunctionalLocationName', sortable: true }, { name: 'Manufacturer serial number', field: 'SerialId', sortable: true }, { name: 'Model', field: 'ModelDescription', sortable: false }, { name: '', field: '', sortable: false } ], actions: { callBack: redirectToAssetDetail, label: 'Create quote' }, filters: [ { allLabel: 'All Sites', field: 'FunctionalLocationName', type: 'string' }, { allLabel: 'All Models', field: 'ModelDescription', type: 'string' } ], searchFields: [ 'PlantCode', 'Name', 'FunctionalLocationName', 'SerialId', 'ModelDescription' ], pageSize: 8 }; return ( <div className="App"> <Grid {...gridProps} /> </div> ); } const redirectToAssetDetail = (rowData) => { window.location.href = `?serialId=${rowData.SerialId}&assetId=${rowData.Name}`; }; export default App; ``` </pre>
+```jsx
+import Grid from '@raghuraj-singh/react-grid';
 
+function App() {
+  const gridProps = {
+    items: [],
 
-## ⚙️ Basic Usage
+    mobileDataProps: {
+      title: 'Name',
+      primaryDescription: ['PlantCode', 'FunctionalLocationName'],
+      secondaryDescription: [
+        {
+          item1: 'SerialId',
+          item2: 'ModelDescription',
+          separator: '|'
+        }
+      ]
+    },
 
-> import Grid from '@raghuraj-singh/react-grid';
- 
-> function App() {
->   const gridProps = {
->     items: [],
->     mobileDataProps: {
->       title: 'Name',
->       primaryDescription: ['PlantCode', 'FunctionalLocationName'],
->       secondaryDescription: [
->         {
->           item1: 'SerialId',
->           item2: 'ModelDescription',
->           separator: '|'
->         }
->       ]
->     },
->     columns: [
->       { name: 'Plant Code', field: 'PlantCode', sortable: true },
->       { name: 'Asset', field: 'Name', sortable: true },
->       { name: 'Site', field: 'FunctionalLocationName', sortable: true },
->       { name: 'Manufacturer serial number', field: 'SerialId', sortable: true },
->       { name: 'Model', field: 'ModelDescription', sortable: false },
->       { name: '', field: '', sortable: false }
->     ],
->     actions: {
->       callBack: redirectToAssetDetail,
->       label: 'Create quote'
->     },
->     filters: [
->       {
->         allLabel: 'All Sites',
->         field: 'FunctionalLocationName',
->         type: 'string'
->       },
->       {
->         allLabel: 'All Models',
->         field: 'ModelDescription',
->        type: 'string'
->       }
->     ],
->     searchFields: ['PlantCode', 'Name', 'FunctionalLocationName', 'SerialId', 'ModelDescription'],
->     pageSize: 8
->   };
+    columns: [
+      { name: 'Plant Code', field: 'PlantCode', sortable: true },
+      { name: 'Asset', field: 'Name', sortable: true },
+      { name: 'Site', field: 'FunctionalLocationName', sortable: true },
+      { name: 'Manufacturer serial number', field: 'SerialId', sortable: true },
+      { name: 'Model', field: 'ModelDescription', sortable: false },
+      { name: '', field: '', sortable: false }
+    ],
 
->   return (
->     <div className="App">
->       <Grid {...gridProps} />
->     </div>
->   );
-> }
+    actions: {
+      callBack: redirectToAssetDetail,
+      label: 'Create quote'
+    },
 
-> const redirectToAssetDetail = (rowData) => {
->   window.location.href = `?serialId=${rowData.SerialId}&assetId=${rowData.Name}`;
-> };
+    filters: [
+      {
+        allLabel: 'All Sites',
+        field: 'FunctionalLocationName',
+        type: 'string'
+      },
+      {
+        allLabel: 'All Models',
+        field: 'ModelDescription',
+        type: 'string'
+      }
+    ],
 
-> export default App;
+    searchFields: [
+      'PlantCode',
+      'Name',
+      'FunctionalLocationName',
+      'SerialId',
+      'ModelDescription'
+    ],
+
+    pageSize: 8
+  };
+
+  return (
+    <div className="App">
+      <Grid {...gridProps} />
+    </div>
+  );
+}
+
+const redirectToAssetDetail = (rowData) => {
+  window.location.href = `?serialId=${rowData.SerialId}&assetId=${rowData.Name}`;
+};
+
+export default App;
+```
+
 
 ## 🔧 Props Reference
 Grid component props
