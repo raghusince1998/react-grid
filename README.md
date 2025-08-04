@@ -83,3 +83,14 @@ yarn add @raghuraj-singh/react-grid
 > };
 
 > export default App;
+
+## 🔧 Props Reference
+Grid component props
+- Prop	     Type	        Description
+> - items	array	Array of data objects to render
+columns	array	Column definitions with field, name, sortable
+actions	object	Action button with callback and label
+filters	array	Optional filters by field and label
+searchFields	array	Fields to search through
+pageSize	number	Number of rows per page
+mobileDataProps	object	Config for mobile card rendering
